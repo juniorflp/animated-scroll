@@ -17,13 +17,13 @@ const EarthSection: React.FC = () => {
   let screenWidth = 1440;
   let screenHeigth = 768;
 
-  // if (typeof window !== "undefined") {
-  //   screenWidth = window.innerWidth;
-  //   screenHeigth = window.innerHeight;
-  // } else {
-  //   screenWidth = 0;
-  //   screenHeigth = 0;
-  // }
+  if (typeof window !== "undefined") {
+    screenWidth = window.innerWidth;
+    screenHeigth = window.innerHeight;
+  } else {
+    screenWidth = 0;
+    screenHeigth = 0;
+  }
 
   const progressY = useTransform(scrollYProgress, [0, 1], [0, 0.1]);
   const progressX = useTransform(scrollYProgress, [0, 1], [0, 6]);
@@ -126,7 +126,7 @@ const EarthSection: React.FC = () => {
               ))}
             </div>
           </div>
-          <Canvas>
+          {/* <Canvas>
             <Suspense fallback={null}>
               <OrbitControls
                 enableZoom={false}
@@ -138,7 +138,7 @@ const EarthSection: React.FC = () => {
               <directionalLight intensity={3.5} position={[3, 4.5, -3.25]} />
             </Suspense>
             <Environment preset="night" />
-          </Canvas>
+          </Canvas> */}
         </div>
       </div>
     </div>
