@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1c1d20;
+  color: white;
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #ffcc9d, #f1f1eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient2 {
+  background: linear-gradient(45deg, #a500ff, #05e1ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient {
+  background: linear-gradient(45deg, #a500ff, #05e1ff);
+}
+.link {
+  color: #05e1ff;
+}
+.link:hover {
+  border-bottom: 1px solid #05e1ff;
+}
+.cursor-negative {
+  mix-blend-mode: difference;
+}
+
+.bg-glass {
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  backdrop-filter: blur(10px);
+  box-shadow: -15px 17px 17px rgba(0, 0, 0, 0.4);
+}
+.email {
+  /* font-size: 48px; */
+  font-weight: bold;
+  background: linear-gradient(45deg, #a500ff, #05e1ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.shadow-big {
+  box-shadow: 0px 60px 60px rgba(0, 0, 0, 0.5);
+}
+.shadow-up {
+  box-shadow: 0px -60px 60px rgba(0, 0, 0, 0.5);
+}
+
+.expanded-card {
+  height: 100%;
+  min-width: 0;
+  flex: 1;
+  object-fit: cover;
+  transition: all 0.5s ease;
+  opacity: 0.9;
+}
+.expanded-card:hover {
+  flex: 2;
+  opacity: 1;
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 30s linear infinite;
+}
