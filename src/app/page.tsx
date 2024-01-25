@@ -13,7 +13,8 @@ import ContainerLenis from "@/components/ContainerLenis";
 export default function Home() {
   return (
     <main className="relative flex flex-col  w-full">
-      <ContainerLenis>
+      olaaaaa
+      {/* <ContainerLenis>
         <CustomCursor />
         <Hero />
         <div className="flex flex-col w-full relative ">
@@ -27,7 +28,7 @@ export default function Home() {
           <EarthSection />
         </div>
         <Footer />
-      </ContainerLenis>
+      </ContainerLenis> */}
     </main>
   );
 }
