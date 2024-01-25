@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense, useRef } from "react";
+import React, { Suspense, useEffect, useRef } from "react";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useScroll, useSpring, useTransform } from "framer-motion";
@@ -19,13 +19,15 @@ const EarthSection: React.FC = () => {
   let screenWidth = 1440;
   let screenHeigth = 768;
 
-  if (typeof window !== "undefined") {
-    screenWidth = window.innerWidth;
-    screenHeigth = window.innerHeight;
-  } else {
-    screenWidth = 0;
-    screenHeigth = 0;
-  }
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      screenWidth = window.innerWidth;
+      screenHeigth = window.innerHeight;
+    } else {
+      screenWidth = 0;
+      screenHeigth = 0;
+    }
+  }, [window]);
 
   const progressY = useTransform(scrollYProgress, [0, 1], [0, 0.1]);
   const progressX = useTransform(scrollYProgress, [0, 1], [0, 6]);
@@ -134,7 +136,7 @@ const EarthSection: React.FC = () => {
               enablePan={false}
               enableRotate={false}
             />
-            {/* <Earth meshRef={ref} y={smoothProgressX} x={smoothProgressY} /> */}
+            <Earth meshRef={ref} y={smoothProgressX} x={smoothProgressY} />
             <ambientLight intensity={0} />
             <directionalLight intensity={3.5} position={[3, 4.5, -3.25]} />
             <Environment preset="night" />
