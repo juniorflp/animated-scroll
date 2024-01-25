@@ -1,5 +1,6 @@
 import ContainerLenis from "@/components/ContainerLenis";
 import CustomCursor from "@/components/CustomCursor";
+import EarthSection from "@/components/EarthSection";
 import ExpandedCards from "@/components/ExpandedCards";
 import GallerySection from "@/components/GallerySection";
 
@@ -25,6 +26,7 @@ export default function Home() {
           <GallerySection />
           <TextSticky />
           <ExpandedCards />
+          <EarthSection />
         </div>
         <Footer />
       </ContainerLenis>

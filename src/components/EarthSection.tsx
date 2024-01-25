@@ -3,15 +3,9 @@
 import React, { Suspense, useRef } from "react";
 import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Earth from "./Earth";
-import {
-  MotionProps,
-  MotionValue,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { useScroll, useSpring, useTransform } from "framer-motion";
 import CardGlass from "./CardGlass";
+import EarthElement from "./EarthElement";
 
 const EarthSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -154,42 +148,3 @@ const EarthSection: React.FC = () => {
 export default EarthSection;
 
 //EARTH COMPONENT-------------------------------------
-
-interface EarthElementProps extends MotionProps {
-  x: MotionValue<number>;
-  y: MotionValue<number>;
-}
-function EarthElement({ x, y }: EarthElementProps) {
-  const ref = useRef<any>(null);
-
-  // AUTO ROTATE ----------------------------------
-  // useFrame((state, delta) => {
-  //   ref.current.rotation.y += delta * 0.3;
-  // });
-
-  // MOUSE ROTATE ----------------------------------
-  // const options = {
-  //   damping: 20,
-  // };
-  // const mouse = {
-  //   x: useSpring(useMotionValue(0), options),
-  //   y: useSpring(useMotionValue(0), options),
-  // };
-
-  // const manageMouse = (e: MouseEvent) => {
-  //   const { innerWidth, innerHeight } = window;
-  //   const { clientX, clientY } = e;
-  //   const x = -0.5 + clientX / innerWidth;
-  //   const y = -0.5 + clientY / innerHeight;
-
-  //   mouse.x.set(x);
-  //   mouse.y.set(y);
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("mousemove", manageMouse);
-  //   return () => window.removeEventListener("mousemove", manageMouse);
-  // }, []);
-
-  return <Earth meshRef={ref} y={x} x={y} />;
-}

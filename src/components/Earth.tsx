@@ -19,7 +19,7 @@ interface ModelProps {
   y: MotionValue<number>;
 }
 
-export const Model: React.FC<ModelProps> = ({ meshRef, x, y, ...props }) => {
+export const Earth: React.FC<ModelProps> = ({ meshRef, x, y, ...props }) => {
   const { nodes, materials } = useGLTF("/earth.gltf");
 
   return (
@@ -37,4 +37,4 @@ export const Model: React.FC<ModelProps> = ({ meshRef, x, y, ...props }) => {
 
 useGLTF.preload("/earth.gltf");
 
-export default Model;
+export default Earth;
