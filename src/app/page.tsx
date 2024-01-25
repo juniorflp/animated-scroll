@@ -1,5 +1,4 @@
 import ContainerLenis from "@/components/ContainerLenis";
-import CustomCursor from "@/components/CustomCursor";
 import EarthSection from "@/components/EarthSection";
 import ExpandedCards from "@/components/ExpandedCards";
 import GallerySection from "@/components/GallerySection";
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <main className="relative flex flex-col w-full">
       <ContainerLenis>
-        <CustomCursor />
         <Hero />
         <div className="flex flex-col w-full relative ">
           <div className="absolute overflow-hidden z-10 top-0 left-0 w-full h-32 bg-gradient-to-b from-[#2E253A] to-transparent"></div>
