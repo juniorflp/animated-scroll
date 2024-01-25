@@ -1,9 +1,11 @@
 import ContainerLenis from "@/components/ContainerLenis";
 import CustomCursor from "@/components/CustomCursor";
+import GallerySection from "@/components/GallerySection";
 
 import Hero from "@/components/Hero";
 import SecondSection from "@/components/SecondSection";
 import TextScale from "@/components/TextScale";
+import TextSticky from "@/components/TextSticky";
 import WhiteSceen from "@/components/WhiteSceen";
 
 import Footer from "@/components/footer/Footer";
@@ -19,6 +21,8 @@ export default function Home() {
           <SecondSection />
           <TextScale />
           <WhiteSceen />
+          <GallerySection />
+          <TextSticky />
         </div>
         <Footer />
       </ContainerLenis>
