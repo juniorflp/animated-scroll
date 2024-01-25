@@ -5,10 +5,12 @@ import { Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useScroll, useSpring, useTransform } from "framer-motion";
 import CardGlass from "./CardGlass";
-import EarthElement from "./EarthElement";
+import Earth from "../../public/Earth";
 
 const EarthSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const ref = useRef<any>(null);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start 30%", "end end"],
@@ -132,7 +134,8 @@ const EarthSection: React.FC = () => {
               enablePan={false}
               enableRotate={false}
             />
-            <EarthElement x={smoothProgressX} y={smoothProgressY} />
+            <Earth meshRef={ref} y={smoothProgressY} x={smoothProgressX} />
+
             <ambientLight intensity={0} />
             <directionalLight intensity={3.5} position={[3, 4.5, -3.25]} />
             <Environment preset="night" />

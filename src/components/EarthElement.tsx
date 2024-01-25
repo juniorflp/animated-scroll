@@ -2,7 +2,7 @@
 import { MotionProps } from "framer-motion";
 import React, { useRef } from "react";
 import { MotionValue } from "framer-motion";
-import Earth from "./Earth";
+import Earth from "../../public/Earth";
 interface EarthElementProps extends MotionProps {
   x: MotionValue<number>;
   y: MotionValue<number>;
