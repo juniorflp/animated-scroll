@@ -129,7 +129,15 @@ const EarthSection: React.FC = () => {
             </div>
           </div>
           <Canvas>
-            <Earth meshRef={ref} y={smoothProgressX} x={smoothProgressY} />
+            <OrbitControls
+              enableZoom={false}
+              enablePan={false}
+              enableRotate={false}
+            />
+            {/* <Earth meshRef={ref} y={smoothProgressX} x={smoothProgressY} /> */}
+            <ambientLight intensity={0} />
+            <directionalLight intensity={3.5} position={[3, 4.5, -3.25]} />
+            <Environment preset="night" />
           </Canvas>
         </div>
       </div>
