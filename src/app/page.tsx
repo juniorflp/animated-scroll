@@ -1,5 +1,6 @@
 import ContainerLenis from "@/components/ContainerLenis";
 import CustomCursor from "@/components/CustomCursor";
+import ExpandedCards from "@/components/ExpandedCards";
 import GallerySection from "@/components/GallerySection";
 
 import Hero from "@/components/Hero";
@@ -23,6 +24,7 @@ export default function Home() {
           <WhiteSceen />
           <GallerySection />
           <TextSticky />
+          <ExpandedCards />
         </div>
         <Footer />
       </ContainerLenis>
