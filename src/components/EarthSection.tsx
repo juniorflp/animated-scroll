@@ -19,15 +19,15 @@ const EarthSection: React.FC = () => {
   let screenWidth = 1440;
   let screenHeigth = 768;
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      screenWidth = window.innerWidth;
-      screenHeigth = window.innerHeight;
-    } else {
-      screenWidth = 0;
-      screenHeigth = 0;
-    }
-  }, [window]);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     screenWidth = window.innerWidth;
+  //     screenHeigth = window.innerHeight;
+  //   } else {
+  //     screenWidth = 0;
+  //     screenHeigth = 0;
+  //   }
+  // }, [window]);
 
   const progressY = useTransform(scrollYProgress, [0, 1], [0, 0.1]);
   const progressX = useTransform(scrollYProgress, [0, 1], [0, 6]);
