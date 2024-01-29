@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const LoadingScreen: React.FC = () => {
@@ -16,6 +16,22 @@ const LoadingScreen: React.FC = () => {
     clearInterval(changeName);
     setHideScreen(true);
   }, 6000);
+
+  // useEffect(() => {
+  //   const hero = document.querySelector(".no-scroll");
+
+  //   if (hideScreen && hero) {
+  //     console.log("a");
+  //     hero.classList.add("no-scroll");
+  //   } else {
+  //     console.log("b");
+  //     hero?.classList.remove("no-scroll");
+  //   }
+  //   return () => {
+  //     hero?.classList.remove("no-scroll");
+  //   };
+  // }, [hideScreen]);
+
   return (
     <motion.div
       className={` bg-primary-black w-full h-screen fixed inset-0 flex flex-col items-center justify-center z-50`}

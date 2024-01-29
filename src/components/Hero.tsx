@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
   return (
     <div
       ref={ref}
-      className="w-full h-screen overflow-hidden relative grid place-items-center"
+      className="w-full h-screen overflow-hidden relative grid place-items-center "
     >
       <LoadingScreen />
       <motion.h1
