@@ -3,7 +3,8 @@
 
  Link da pagina https://animated-page-three.vercel.app/
 
-![image](https://github.com/juniorflp/animated-page/assets/100806337/d759a2f7-bd4f-40b2-a4a8-ee0f0c5e171f)
+![image](https://github.com/juniorflp/animated-scroll/assets/100806337/83e65594-e439-4fbe-9e58-b2b7581bc6cb)
+
 
 
 ## Tecnologias Utilizadas
